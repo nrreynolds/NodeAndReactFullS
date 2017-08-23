@@ -3,7 +3,7 @@ const app = express();
 
 //create route handler and assocaite it with a route
 //root handler
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   res.send({ hi: "there" });
 });
 
