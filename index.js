@@ -1,11 +1,10 @@
-const express = require("express");
+const express = require('express');
+require('./services/passport');
+
 const app = express();
 
-//create route handler and assocaite it with a route
-//root handler
-app.get('/', (req, res) => {
-  res.send({ hi: "there" });
-});
+require('./routes/authRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
+
